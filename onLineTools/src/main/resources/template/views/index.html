@@ -301,6 +301,97 @@
             color: #333;
         }
 
+        #nav {
+            background-color: #fff;
+        }
+
+        #nav .nav-inner {
+            position: relative;
+            padding: 5px 10px 0 10px;
+            background: url(//qn13.tool.lu/201510/25/pQGN8Q9v5AQ4i78J_14x1.png) 0 bottom repeat-x #f5f5f5;
+        }
+
+        .w:after {
+            overflow: hidden;
+            clear: both;
+            display: block;
+            height: 0;
+            content: "\20";
+        }
+
+        .clearfix:after, .clearfix:before {
+            content: '';
+            display: table;
+        }
+
+        #nav ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        #nav .nav-inner ul {
+            height: 32px;
+            overflow: hidden;
+            margin-right: 70px;
+        }
+
+        li {
+            margin: .1em 0 .1em 1.75em;
+        }
+
+        #nav li {
+            list-style-type: none;
+            margin: 0;
+            float: left;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        #nav li {
+            list-style-type: none;
+            margin: 0;
+            float: left;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        #nav li a {
+            line-height: 31px;
+            padding: 0 14px;
+            display: block;
+        }
+
+
+
+
+        .feedback {
+            background-color: #0297f8;
+            background-image: url(//qn11.tool.lu/201708/03/124834fKC2UXA9sQUEVshq.svg);
+            background-position: 2px 4px;
+            background-repeat: no-repeat;
+            background-size: 18px;
+            border-radius: 3px;
+            border: 1px solid #0297f8;
+            box-shadow: 0 1px 2px rgba(0,0,0,.1);
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 12px;
+            line-height: 12px;
+            opacity: .9;
+            padding: 5px;
+            overflow: hidden;
+            min-width: 12px;
+            max-width: 12px;
+            text-indent: 17px;
+            transition: all 250ms ease-in-out;
+            white-space: nowrap;
+            margin-top: 1px;
+        }
+
 
 
 
@@ -349,6 +440,27 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="nav" class="hidden-xs hidden-sm" style="z-index: auto; position: static; top: auto;">
+        <div class="w">
+            <div class="nav-inner clearfix">
+                <ul class="clearfix" style="float: left;">
+                    <li><a class="nav-mine" style="color: #34495e;" href="https://tool.lu/mine/" rel="nofollow">我的</a></li>
+                    <li class="active"><a href="https://tool.lu/" rel="nofollow">在线工具</a>
+                    </li>
+                    <li><a href="https://tool.lu/article/">码农文库</a></li>
+                    <li><a href="https://tool.lu/tip/">奇淫巧技</a></li>
+                    <li class=""><a href="https://tool.lu/software/">软件推荐</a></li>
+                    <!-- <li class=""><a href="https://tool.lu/shop/" style="color: #3498DB;">global.shop</a></li> -->
+                    <li class=""><a href="https://tool.lu/nav/" style="">网址导航</a></li>
+                    <li class=" hidden-xs"><a href="https://tool.lu/wiki/">Wiki</a>
+                    </li>
+                </ul>
+                <a rel="noreferrer noopener" target="_blank" href="https://tool.lu/user/messages/2" class="feedback">反馈</a>
             </div>
         </div>
     </div>

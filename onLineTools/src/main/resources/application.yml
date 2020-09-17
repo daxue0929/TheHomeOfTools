@@ -12,5 +12,5 @@ spring:
     encoding: UTF-8
     content-type: text/html
     mode: HTML5
-  freemarker:
+  freemarker
     cache: false

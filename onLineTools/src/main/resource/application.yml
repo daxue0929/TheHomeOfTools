@@ -1,9 +1,9 @@
 server:
   port: 8080
-  servlet:
-    context-path: /onLineTools
 
 spring:
+  resources:
+    static-locations: classpath:/template/
   thymeleaf:
     prefix: classpath:/template/
     cache: false #开发过程中建议关闭cache

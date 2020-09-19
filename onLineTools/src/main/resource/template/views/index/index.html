@@ -5,31 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../css/reset.css">
-    <link href="../css/base.css">
-    <link href="../css/reset2.css">
+    <link href="/css/reset.css">
+    <link href="/css/base.css">
+    <link href="/css/reset2.css">
     <style>
         .g-nav {
             padding: 0 5px;
             background-color: #363636;
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
         }
+
         nav::before {
             content: " ";
             display: table;
         }
+
         .g-nav::after {
             clear: both;
         }
+
         .g-nav::after, .g-nav::before {
             content: " ";
             display: table;
         }
+
         .g-nav ul {
             margin: 0;
             padding: 0;
         }
+
         .g-nav > ul > li {
 
             float: left;
@@ -37,6 +42,7 @@
             margin: 0;
             list-style: none;
         }
+
         .g-nav a {
             position: relative;
             display: inline-block;
@@ -46,24 +52,29 @@
             color: #ccc;
             text-decoration: none;
         }
+
         .g-nav ul {
             margin: 0;
             padding: 0;
         }
+
         .fr {
             float: right;
         }
+
         .g-nav > ul > li {
             float: left;
             display: inline;
             margin: 0;
             list-style: none;
         }
+
         .dropdown {
             position: relative;
             z-index: 8;
             width: auto;
         }
+
         .dropdown ul {
             display: none;
             position: absolute;
@@ -87,40 +98,48 @@
             height: 95px;
             z-index: 2;
         }
+
         .w {
             width: 1190px;
         }
+
         .w {
             width: 1190px;
             margin: 0 auto;
         }
+
         #hdr a.logo {
             font-size: 28px;
             text-decoration: none;
             color: #009a61;
-            font-family: "Trebuchet MS","Geneva CE",lucida,'Microsoft YaHei',sans-serif;
+            font-family: "Trebuchet MS", "Geneva CE", lucida, 'Microsoft YaHei', sans-serif;
             position: absolute;
             left: 0;
             top: 26px;
             padding-left: 38px;
             background: url(//qn11.tool.lu/201710/15/103320SbM84Ql4tETjg49a_28x28.png) 0 7px no-repeat;
         }
+
         h1, h2, h3, h4 {
-            font-family: Trebuchet MS,"Geneva CE",lucida,'Microsoft YaHei',sans-serif;
+            font-family: Trebuchet MS, "Geneva CE", lucida, 'Microsoft YaHei', sans-serif;
         }
+
         h1, h2, h3, h4 {
             text-indent: 0;
             margin: 1.2em 0 .7em;
             color: #333;
         }
+
         h1 {
             font-size: 185%;
             font-weight: 400;
             margin: .2em 0;
         }
+
         .hidden {
             display: none;
         }
+
         #srch {
             position: absolute;
             top: 50%;
@@ -129,19 +148,24 @@
             margin-left: -250px;
             width: 472px;
         }
+
         input, label, select {
             vertical-align: middle;
         }
+
         input, select, textarea {
             font-size: 100%;
         }
+
         input, select, textarea {
-            font-family: Verdana,"Geneva CE",lucida,'Microsoft YaHei',sans-serif;
+            font-family: Verdana, "Geneva CE", lucida, 'Microsoft YaHei', sans-serif;
         }
+
         input[type="text"], textarea {
             border-radius: 0;
             -webkit-appearance: none;
         }
+
         #srch input {
             width: 220px;
             height: 22px;
@@ -157,6 +181,7 @@
             border-right: none;
             border-radius: 5px 0 0 5px;
         }
+
         button {
             margin: 0 7px 0 0;
             background-color: #f5f5f5;
@@ -171,8 +196,9 @@
             padding: 4px 7px 3px;
             font-size: 12px;
             line-height: 130%;
-            font-family: "Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+            font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
         }
+
         .waves-effect {
             position: relative;
             cursor: pointer;
@@ -184,11 +210,13 @@
             user-select: none;
             -webkit-tap-highlight-color: transparent;
         }
+
         button[type] {
             padding: 5px 8px;
             line-height: 17px;
             border-radius: 0;
         }
+
         #srch button {
             width: 80px;
             height: 32px;
@@ -201,17 +229,20 @@
             border: 2px solid #ccc;
             border-radius: 0 5px 5px 0;
         }
+
         #srch .hot-keywords {
             margin: 0;
             padding: 0;
             position: absolute;
             top: 2px;
             right: 80px;
-            background-color: rgba(255,255,255,.5);
+            background-color: rgba(255, 255, 255, .5);
         }
+
         a {
             text-decoration: none;
         }
+
         a, a:hover, a:link {
             color: #009a61;
         }
@@ -230,6 +261,7 @@
             top: 30px;
             right: 10px;
         }
+
         .w::after {
             overflow: hidden;
             clear: both;
@@ -237,18 +269,23 @@
             height: 0;
             content: "\20";
         }
+
         menu, ol, ul {
             margin: 0 0 1.75em 1.75em;
         }
+
         #eles li, #eles ul {
             list-style: none;
         }
+
         li {
             margin: .1em 0 .1em 1.75em;
         }
+
         #eles li, #eles ul {
             list-style: none;
         }
+
         #eles li {
             display: inline;
             float: left;
@@ -261,6 +298,7 @@
         a, a:hover, a:link {
             color: #009a61;
         }
+
         #eles a {
             display: block;
             line-height: 1;
@@ -271,6 +309,7 @@
         em, i {
             margin-right: .1em;
         }
+
         .fa, .fab, .fal, .far, .fas {
             -moz-osx-font-smoothing: grayscale;
             -webkit-font-smoothing: antialiased;
@@ -280,15 +319,18 @@
             text-rendering: auto;
             line-height: 1;
         }
+
         .fa, .far, .fas {
             font-family: "Font Awesome 5 Free";
         }
+
         #eles a i {
 
             display: block;
             font-size: 16px;
 
         }
+
         .fa, .fas {
 
             font-weight: 900;
@@ -301,8 +343,90 @@
             color: #333;
         }
 
+        #nav {
+            background-color: #fff;
+        }
+        #nav .nav-inner {
+            position: relative;
+            padding: 5px 10px 0 10px;
+            background: url(//qn13.tool.lu/201510/25/pQGN8Q9v5AQ4i78J_14x1.png) 0 bottom repeat-x #f5f5f5;
+        }
+        .clearfix:after, .clearfix:before {
+            content: '';
+            display: table;
+        }
+        #nav ul {
+            padding: 0;
+            margin: 0;
+        }
+        #nav .nav-inner ul {
+            height: 32px;
+            overflow: hidden;
+            margin-right: 70px;
+        }
+        .clearfix:after, .clearfix:before {
+            content: '';
+            display: table;
+        }
+        #nav li {
+            list-style-type: none;
+            margin: 0;
+            float: left;
+            display: inline-block;
+            font-size: 15px;
+        }
+        a, a:hover, a:link {
+            color: #009a61;
+        }
+        #nav li.active a {
+            border: 1px solid #ccc;
+            border-bottom: none;
+            background: #fff;
+            border-radius: 3px 3px 0 0;
+        }
+
+        #nav li a {
+            line-height: 31px;
+            padding: 0 14px;
+            display: block;
+        }
 
 
+        .feedback {
+            background-color: #0297f8;
+            background-image: url(//qn11.tool.lu/201708/03/124834fKC2UXA9sQUEVshq.svg);
+            background-position: 2px 4px;
+            background-repeat: no-repeat;
+            background-size: 18px;
+            border-radius: 3px;
+            border: 1px solid #0297f8;
+            box-shadow: 0 1px 2px rgba(0,0,0,.1);
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 12px;
+            line-height: 12px;
+            opacity: .9;
+            padding: 5px;
+            overflow: hidden;
+            min-width: 12px;
+            max-width: 12px;
+            text-indent: 17px;
+            transition: all 250ms ease-in-out;
+            white-space: nowrap;
+            margin-top: 1px;
+        }
+
+        .clearfix:after, .clearfix:before {
+            content: '';
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
 
 
     </style>
@@ -311,40 +435,29 @@
 <body>
 <div class="g-nav clearfix">
     <ul>
-        <li class="hidden-xs"><a href="//tool.lu/">在线工具</a></li>
+        <li class="hidden-xs"><a href="#">在线工具</a></li>
     </ul>
-    <ul class="fr" id="js_login_bar" data-url="https://tool.lu/hello?callback=?"><li class="dropdown">
-        <a href="#">语言 <i class="fas fa-caret-down"></i></a>
-        <ul>
-            <li><a href="https://tool.lu/">中文</a></li>
-            <li><a href="https://tool.lu/en_US/">English</a></li>
-            <li><a href="https://tool.lu/ja_JP/">日本語</a></li>
-            <li><a href="https://tool.lu/ko_KR/">한국어</a></li>
-            <li><a href="https://tool.lu/ru_RU/">Русский</a></li>
-        </ul>
-    </li>
-        <li><a class="js-login" href="//plus.tool.lu/user/login?redirect=https%3A%2F%2Ftool.lu%2F">登录</a>
+    <ul class="fr" id="js_login_bar" data-url="#">
+        <li>
+            <a class="js-login" href="/views/login/login.html">登录</a>
         </li>
-        <li><a href="//plus.tool.lu/user/register">开放注册</a></li>
+        <li><a href="#">开放注册</a></li>
 
     </ul>
 </div>
 <div id="wrap">
     <div id="hdr">
         <div class="w">
-            <a class="logo" rel="nofollow" href="https://tool.lu/">
-                在线工具<!--<span class="sup"></span>--></a>
+            <a class="logo" rel="nofollow" href="#" @click="alert('未来访')">在线工具<!--<span class="sup"></span>--></a>
             <h1 class="hidden">在线工具,开发人员工具,代码格式化、压缩、加密、解密,下载链接转换,ico图标制作,字帖生成</h1>
-            <form name="search" id="srch" class="hidden-xs hidden-sm" action="https://tool.lu/search/" method="GET">
+            <form name="search" id="srch" class="hidden-xs hidden-sm" action="#" method="GET">
                 <input type="text" class="text" name="query" value="" placeholder="搜索其实很简单">
                 <button type="submit" class=" waves-effect">搜索</button>
-                <p class="hot-keywords">
-                    <a target="_blank" href="https://tool.lu/search/?query=%E6%A0%BC%E5%BC%8F%E5%8C%96">格式化</a><a target="_blank" href="https://tool.lu/search/?query=%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81">运行代码</a><a target="_blank" href="https://tool.lu/search/?query=%E6%97%B6%E9%97%B4%E6%88%B3">时间戳</a>                </p>
             </form>
             <div id="eles">
                 <ul>
                     <li>
-                        <a href="https://tool.lu/top/">
+                        <a href="#">
                             <i class="fas fa-list-ol"></i>
                             <span>排行榜</span>
                         </a>
@@ -353,9 +466,46 @@
             </div>
         </div>
     </div>
+    <div id="nav" class="hidden-xs hidden-sm" style="z-index: 1000;">
+        <div class="w">
+            <div class="nav-inner clearfix">
+                <ul class="clearfix" style="float: left;">
+                    <li><a class="nav-mine" style="color: #34495e;" href="https://tool.lu/mine/" rel="nofollow">我的</a></li>
+                    <li class="active"><a href="#" rel="nofollow">在线工具</a></li>
+<!--                    <li><a href="https://tool.lu/article/">码农文库</a></li>-->
+<!--                    <li><a href="https://tool.lu/tip/">奇淫巧技</a></li>-->
+<!--                    <li class=""><a href="https://tool.lu/software/">软件推荐</a></li>-->
+<!--                    <li class=""><a href="https://tool.lu/nav/" style="">网址导航</a></li>-->
+<!--                    <li class=" hidden-xs"><a href="https://tool.lu/wiki/">Wiki</a></li>-->
+                </ul>
+                <a rel="noreferrer noopener" target="_blank" href="https://tool.lu/user/messages/2" class="feedback">反馈</a>
+            </div>
+        </div>
+    </div>
 
+
+
+
+
+<!--    <div id="app">-->
+<!--        {{ message }}-->
+<!--    </div>-->
 
 
 </div>
+
+<script src="/js/vue-dev.js"></script>
+<script src="/views/index/index.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+
+
+</script>
+
 </body>
 </html>

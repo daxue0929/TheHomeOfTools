@@ -3,9 +3,9 @@ server:
 
 spring:
   resources:
-    static-locations: classpath:/template/
+#    static-locations: classpath:/templates/
   thymeleaf:
-    prefix: classpath:/template/
+    prefix: classpath:/templates/
     cache: false #开发过程中建议关闭cache
     check-template-location: true
     suffix: .html

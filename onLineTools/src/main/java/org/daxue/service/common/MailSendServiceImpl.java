@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.Properties;
 
 @Slf4j
-@Service
+@Service("mailSendService")
 public class MailSendServiceImpl implements MailSendService{
 
     @Override

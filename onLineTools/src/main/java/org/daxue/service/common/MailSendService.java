@@ -1,7 +1,5 @@
 package org.daxue.service.common;
 
-import org.springframework.stereotype.Service;
-
 public interface MailSendService {
 
     /**

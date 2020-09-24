@@ -4,9 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.daxue.service.common.MailSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author daxue0929
@@ -17,8 +21,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
     MailSendService mailSendService;
+
+    @Autowired
+    public TestController(MailSendService mailSendService){
+        this.mailSendService = mailSendService;
+    }
+
 
 //    @RequestMapping("/")
 //    public String testPage() {
@@ -33,8 +42,15 @@ public class TestController {
 
     @ResponseBody
     @RequestMapping(value = "/test02", method = RequestMethod.GET)
-    public String test02() {
-        return "test02";
+    public Map test02() {
+
+        String test = "hello world ni ////are right! " +
+                "/n/n\n" +
+                "look at me.";
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("s____tr", Base64Utils.encodeToString(test.getBytes()));
+        result.put("strSafe", Base64Utils.encodeToUrlSafeString(test.getBytes()));
+        return result;
     }
 
 }

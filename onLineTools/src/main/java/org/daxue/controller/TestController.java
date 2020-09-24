@@ -1,6 +1,7 @@
 package org.daxue.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 import org.daxue.service.common.MailSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,7 +9,10 @@ import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,14 +47,41 @@ public class TestController {
     @ResponseBody
     @RequestMapping(value = "/test02", method = RequestMethod.GET)
     public Map test02() {
+        HashMap<String, Object> result = null;
+        try {
+            String test = "hello world ni ////are right! " +
+                    "/n/n\n" +
+                    "look at me.";
+            result = new HashMap<>();
 
-        String test = "hello world ni ////are right! " +
-                "/n/n\n" +
-                "look at me.";
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("s____tr", Base64Utils.encodeToString(test.getBytes()));
-        result.put("strSafe", Base64Utils.encodeToUrlSafeString(test.getBytes()));
+            File file = new File("/Users/daxue0929/Downloads/timg.jpeg");
+            byte[] bytes = FileUtils.readFileToByteArray(file);
+
+
+            result.put("s____tr", Base64Utils.encodeToString(bytes));
+            result.put("strSafe", Base64Utils.encodeToUrlSafeString(bytes));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return result;
     }
+
+
+    @RequestMapping("/testForwardMAV")
+    public ModelAndView testForwardMAV() {
+        ModelAndView mv = new ModelAndView();
+        //使用重定向，此时springmvc.xml配置文件中的视图解析器将会失效
+        mv.setViewName("redirect:/test/testForwardResult");
+        return mv;
+    }
+
+
+    @RequestMapping("/testForwardResult")
+    @ResponseBody
+    public String testForwardResult() {
+        return "new page";
+    }
+
+
 
 }

@@ -83,5 +83,16 @@ public class TestController {
     }
 
 
+    @RequestMapping("/test03")
+    @ResponseBody
+    public void test03() {
+        File file = new File("/das");
+        boolean b = file.canRead();
+        file = null;
+        boolean b1 = file.canRead();
+
+    }
+
+
 
 }

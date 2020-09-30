@@ -1,7 +1,9 @@
 package org.daxue.controller;
 
+import com.alipay.api.AlipayApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
+import org.daxue.service.common.AliPayService;
 import org.daxue.service.common.MailSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,10 +28,13 @@ import java.util.Map;
 public class TestController {
 
     MailSendService mailSendService;
+    AliPayService aliPayService;
 
     @Autowired
-    public TestController(MailSendService mailSendService){
+    public TestController(MailSendService mailSendService, AliPayService aliPayService){
         this.mailSendService = mailSendService;
+        this.aliPayService = aliPayService;
+
     }
 
 
@@ -91,6 +96,15 @@ public class TestController {
         file = null;
         boolean b1 = file.canRead();
 
+    }
+
+    @RequestMapping("/ali")
+    public void test04() {
+        try {
+            aliPayService.aliPayRequest();
+        } catch (AlipayApiException e) {
+            log.error("TestController test04 error: {}", e.getMessage());
+        }
     }
 
 

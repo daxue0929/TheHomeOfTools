@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TheHomeOfTools.iml" filepath="$PROJECT_DIR$/.idea/TheHomeOfTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/onLineTools/onLineTools.iml" filepath="$PROJECT_DIR$/onLineTools/onLineTools.iml" />
     </modules>
   </component>

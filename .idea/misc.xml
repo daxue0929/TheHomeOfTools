@@ -8,6 +8,8 @@
       <list>
         <option value="$PROJECT_DIR$/onLineTools/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/daxue-idp/pom.xml" />
+        <option value="$PROJECT_DIR$/xiaoxue-sp/pom.xml" />
       </list>
     </option>
   </component>

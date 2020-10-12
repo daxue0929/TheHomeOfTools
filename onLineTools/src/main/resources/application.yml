@@ -4,3 +4,13 @@ server:
 spring:
   resources:
     static-locations: classpath:/templates/
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.107.127.218:3306/tool?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # mybatis下划线转为驼峰

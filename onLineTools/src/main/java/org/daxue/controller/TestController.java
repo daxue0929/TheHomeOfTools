@@ -38,10 +38,10 @@ public class TestController {
     }
 
 
-//    @RequestMapping("/")
-//    public String testPage() {
-//        return "views/index";
-//    }
+    @RequestMapping("/")
+    public String testPage() {
+        return "views/index";
+    }
 
     @RequestMapping(value = "/test01", method = RequestMethod.GET)
     public void test01() {

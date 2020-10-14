@@ -3,7 +3,7 @@ server:
 
 spring:
   resources:
-    static-locations: classpath:/templates/
+    static-locations: classpath:/templates
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver

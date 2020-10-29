@@ -19,8 +19,8 @@
     <bytecodeTargetLevel>
       <module name="core" target="1.8" />
       <module name="daxue-idp" target="1.8" />
-      <module name="nacos-consumer" target="1.8" />
-      <module name="nacos-provider" target="1.8" />
+      <module name="nacos-consumer" target="1.5" />
+      <module name="nacos-provider" target="1.5" />
       <module name="nacos-test" target="1.5" />
       <module name="onLineTools" target="1.8" />
       <module name="xiaoxue-sp" target="1.8" />
@@ -30,8 +30,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="core" options="-parameters" />
       <module name="daxue-idp" options="-parameters" />
-      <module name="nacos-consumer" options="-parameters" />
-      <module name="nacos-provider" options="-parameters" />
+      <module name="nacos-consumer" options="" />
+      <module name="nacos-provider" options="" />
       <module name="onLineTools" options="-parameters" />
       <module name="xiaoxue-sp" options="-parameters" />
     </option>

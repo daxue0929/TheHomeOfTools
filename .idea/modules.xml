@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/TheHomeOfTools.iml" filepath="$PROJECT_DIR$/.idea/TheHomeOfTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/daxue-idp/daxue-idp.iml" filepath="$PROJECT_DIR$/daxue-idp/daxue-idp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-consumer/nacos-consumer.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-consumer/nacos-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-provider.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-test.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/onLineTools/onLineTools.iml" filepath="$PROJECT_DIR$/onLineTools/onLineTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/xiaoxue-sp/xiaoxue-sp.iml" filepath="$PROJECT_DIR$/xiaoxue-sp/xiaoxue-sp.iml" />
     </modules>

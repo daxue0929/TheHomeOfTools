@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daxue-idp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-test/nacos-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-test/nacos-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/onLineTools/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xiaoxue-sp/src/main/java" charset="UTF-8" />
   </component>

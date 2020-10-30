@@ -1,7 +1,7 @@
-package org.daxue.service.sys;
+package org.daxue.service.core;
 
 import org.daxue.dao.SysRoleMapper;
-import org.daxue.model.SysRole;
+import org.daxue.model.CoreRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class SysRoleService {
         this.roleMapper = roleMapper;
     }
 
-    public SysRole selectById(Integer id){
+    public CoreRole selectById(Integer id){
         return roleMapper.selectById(id);
     }
 }

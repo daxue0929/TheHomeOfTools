@@ -1,12 +1,13 @@
-package org.daxue.service.sys;
+package org.daxue.service.core;
 
+import org.daxue.base.service.AbstractBaseService;
 import org.daxue.dao.SysUserMapper;
-import org.daxue.model.SysUser;
+import org.daxue.model.CoreUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SysUserService {
+public class SysUserService extends AbstractBaseService<CoreUser> {
 
     private SysUserMapper userMapper;
 
@@ -15,11 +16,11 @@ public class SysUserService {
         this.userMapper = userMapper;
     }
 
-    public SysUser selectById(Integer id) {
+    public CoreUser selectById(Integer id) {
         return userMapper.selectById(id);
     }
 
-    public SysUser selectByName(String name) {
+    public CoreUser selectByName(String name) {
         return userMapper.selectByName(name);
     }
 }

@@ -1,6 +1,6 @@
 package org.daxue.config;
 
-import org.daxue.service.sys.CustomUserDetailsService;
+import org.daxue.service.core.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

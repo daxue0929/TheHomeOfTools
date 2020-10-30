@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.Collection;
 
 @Data
-public class SysUser implements Serializable {
+public class CoreUser implements Serializable {
     private static final long serialVersionUID = -8818059456010710913L;
 
 
@@ -20,4 +20,15 @@ public class SysUser implements Serializable {
     private String name;
 
     private String password;
+
+    private String email;
+
+    private String phone;
+
+    private String createTime;
+
+    private String updateTime;
+
+    private String account;
+
 }

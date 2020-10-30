@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class SysRoleUser implements Serializable {
+public class CoreRoleUser implements Serializable {
     private static final long serialVersionUID = -3942755400177443504L;
 
     public Integer id;

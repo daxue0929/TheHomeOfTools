@@ -1,8 +1,8 @@
-package org.daxue.service.sys;
+package org.daxue.service.core;
 
-import org.daxue.model.SysRole;
-import org.daxue.model.SysRoleUser;
-import org.daxue.model.SysUser;
+import org.daxue.model.CoreRole;
+import org.daxue.model.CoreRoleUser;
+import org.daxue.model.CoreUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -42,7 +42,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
         Collection<GrantedAuthority> authorities = new ArrayList<>();
         // 从数据库中取出用户信息
-        SysUser user = userService.selectByName(username);
+        CoreUser user = userService.selectByName(username);
 
         // 判断用户是否存在
         if(user == null) {
@@ -50,9 +50,9 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
 
         // 添加权限
-        List<SysRoleUser> userRoles = roleUserService.listByUserId(user.getId());
-        for (SysRoleUser userRole : userRoles) {
-            SysRole role = roleService.selectById(userRole.getSysRoleId());
+        List<CoreRoleUser> userRoles = roleUserService.listByUserId(user.getId());
+        for (CoreRoleUser userRole : userRoles) {
+            CoreRole role = roleService.selectById(userRole.getSysRoleId());
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
 

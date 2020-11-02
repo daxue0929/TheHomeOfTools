@@ -32,8 +32,9 @@ public class LindTokenAuthenticationFilter extends OncePerRequestFilter {
 
 
     /**
-     * token filter.
+     * redis存储token存在优化空间
      *
+     * token filter.
      * @param request     .
      * @param response    .
      * @param filterChain .

@@ -10,6 +10,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +31,15 @@ public class CoreUserController {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    /**
+     *
+     * @param username daxue
+     * @param password 123
+     * @return
+     */
     @GetMapping("/generateToken")
     private String generateToken(String username, String password) {
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username, password);
@@ -43,6 +54,17 @@ public class CoreUserController {
         stringRedisTemplate.opsForValue().set(userDetails.getUsername(), userDetails.getUsername());
         log.info("{}", userDetails.toString());
         return userDetails.getUsername();
+    }
+
+    /**
+     * 把密码123加密存在数据库中
+     * @param args
+     */
+    public static void main(String[] args) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encode = passwordEncoder.encode("123");
+        log.info("{}", encode);
+
     }
 
 

@@ -12,7 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -33,41 +32,33 @@ public class TokenWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 内存demo的方式实现验证相关
-     * 修改为以下注释的样子，待研究
+     *
+     * ------修改
+     *
      * @param auth
      * @throws Exception
      */
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-            .withUser("daxue")
-            .password(new PasswordEncoder() {
-                @Override
-                public String encode(final CharSequence charSequence) {
-                    String salt = BCrypt.gensalt();
-                    return BCrypt.hashpw(charSequence.toString(), salt);
-                }
-
-                @Override
-                public boolean matches(final CharSequence charSequence, final String s) {
-                    return BCrypt.checkpw(charSequence.toString(), s);
-                }
-            }.encode("123"))
-            .roles("USER", "ADMIN");
-
-//        auth.userDetailsService(userDetailsService).passwordEncoder(new PasswordEncoder() {
-//            @Override
-//            public String encode(final CharSequence charSequence) {
-//                String salt = BCrypt.gensalt();
-//                return BCrypt.hashpw(charSequence.toString(), salt);
-//            }
+//        auth
+//            .inMemoryAuthentication()
+//            .withUser("daxue")
+//            .password(new PasswordEncoder() {
+//                @Override
+//                public String encode(final CharSequence charSequence) {
+//                    String salt = BCrypt.gensalt();
+//                    return BCrypt.hashpw(charSequence.toString(), salt);
+//                }
 //
-//            @Override
-//            public boolean matches(final CharSequence charSequence, final String s) {
-//                return BCrypt.checkpw(charSequence.toString(), s);
-//            }
-//        }).and().authenticationProvider();
+//                @Override
+//                public boolean matches(final CharSequence charSequence, final String s) {
+//                    return BCrypt.checkpw(charSequence.toString(), s);
+//                }
+//            }.encode("123"))
+//            .roles("USER", "ADMIN");
+
+//        auth.userDetailsService(userDetailsService).passwordEncoder(NoOpPasswordEncoder.getInstance());
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Bean

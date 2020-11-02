@@ -8,8 +8,12 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * 废弃此类后的替代类为 org.daxue.config.TokenWebSecurityConfig
+ */
 //@Configuration
 //@EnableWebSecurity
+@Deprecated
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired

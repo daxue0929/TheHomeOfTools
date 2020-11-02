@@ -10,6 +10,16 @@ spring:
     url: jdbc:mysql://39.107.127.218:3306/tool?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: root
+  redis:
+    host: 127.0.0.1  #Redis服务器连接端口
+    port: 6379
+#    password:          #Redis服务器连接密码（默认为空）
+    timeout: 30000     #连接超时时间（毫秒）
+
+
+  jackson:
+    serialization:
+      indent_output: true
 
 mybatis:
   configuration:

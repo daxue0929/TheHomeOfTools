@@ -9,14 +9,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SysUserMapper {
 
-    @Select("SELECT * FROM sys_user WHERE id = #{id}")
+    @Select("SELECT * FROM core_user WHERE id = #{id}")
     CoreUser selectById(Integer id);
 
-    @Select("SELECT * FROM sys_user WHERE name = #{name}")
+    @Select("SELECT * FROM core_user WHERE name = #{name}")
     CoreUser selectByName(String name);
 
-
-
-
-
+    @Select("SELECT * FROM core_user WHERE account = #{account}")
+    CoreUser selectByAccount(String account);
 }

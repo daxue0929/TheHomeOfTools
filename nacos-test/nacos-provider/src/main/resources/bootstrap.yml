@@ -1,9 +1,8 @@
 spring:
-  application:
-    name: nacos-provider
   cloud:
     nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848 #注册中心地址
-server:
-  port: 17357
+      config:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: nacos-provider
+

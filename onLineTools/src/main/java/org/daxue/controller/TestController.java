@@ -116,13 +116,8 @@ public class TestController {
     public ResponseEntity<SysUser> sysUserUpdate(
         @PathVariable(name = "id") Integer id
     ) {
-
-
-
         SysUser sysUser = SysUser.genSysUserMock();
-
         sysUser.setId(id);
-
         return ResponseEntity.ok(sysUser);
     }
 

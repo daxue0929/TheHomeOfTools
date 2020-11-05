@@ -16,6 +16,6 @@ public class ProductService {
 
     public void update(Product bean) {
 
-        productESDAO.save(bean);
+//        productESDAO.save(bean);
     }
 }

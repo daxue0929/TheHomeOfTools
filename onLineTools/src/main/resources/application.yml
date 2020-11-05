@@ -1,7 +1,14 @@
 server:
-  port: 8080
+  port: 9091
 
 spring:
+  application:
+    name: onLineTools
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #注册中心地址
+
   resources:
     static-locations: classpath:/templates
 

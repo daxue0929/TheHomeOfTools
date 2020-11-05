@@ -118,6 +118,7 @@ public class TestController {
     ) {
 
         SysUser sysUser = SysUser.genSysUserMock();
+
         sysUser.setId(id);
 
         return ResponseEntity.ok(sysUser);

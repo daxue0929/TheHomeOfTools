@@ -117,6 +117,8 @@ public class TestController {
         @PathVariable(name = "id") Integer id
     ) {
 
+
+
         SysUser sysUser = SysUser.genSysUserMock();
 
         sysUser.setId(id);

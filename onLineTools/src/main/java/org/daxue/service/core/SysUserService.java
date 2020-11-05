@@ -2,7 +2,7 @@ package org.daxue.service.core;
 
 import org.daxue.base.service.AbstractBaseService;
 import org.daxue.dao.SysUserMapper;
-import org.daxue.model.CoreUser;
+import org.daxue.model.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SysUserService extends AbstractBaseService<CoreUser> implements UserDetailsService {
+public class SysUserService extends AbstractBaseService<SysUser> implements UserDetailsService {
 
     @Autowired
     private SysUserMapper userMapper;
@@ -20,15 +20,15 @@ public class SysUserService extends AbstractBaseService<CoreUser> implements Use
         this.userMapper = userMapper;
     }
 
-    public CoreUser selectById(Integer id) {
+    public SysUser selectById(Integer id) {
         return userMapper.selectById(id);
     }
 
-    public CoreUser selectByName(String name) {
+    public SysUser selectByName(String name) {
         return userMapper.selectByName(name);
     }
 
-    public CoreUser selectByAccount(String account){
+    public SysUser selectByAccount(String account){
         return userMapper.selectByAccount(account);
     }
 

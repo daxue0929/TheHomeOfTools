@@ -1,14 +1,17 @@
 package org.daxue.model;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 
 @Data
-public class CoreUser implements Serializable, UserDetails {
+@Accessors(chain = true)
+public class SysUser implements Serializable, UserDetails {
     private static final long serialVersionUID = -8818059456010710913L;
 
 
@@ -28,6 +31,15 @@ public class CoreUser implements Serializable, UserDetails {
 
     // 登录用户名
     private String account;
+
+    public static SysUser genSysUserMock() {
+        SysUser sysUser = new SysUser();
+        return sysUser.setAccount("accountUserName")
+            .setName("daxue")
+            .setEmail("daxue0929@qq.com")
+            .setCreateTime(new Date().toString())
+            .setPassword("123415");
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

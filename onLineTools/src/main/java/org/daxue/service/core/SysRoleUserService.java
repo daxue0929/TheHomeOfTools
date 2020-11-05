@@ -1,7 +1,7 @@
 package org.daxue.service.core;
 
 import org.daxue.dao.SysRoleUserMapper;
-import org.daxue.model.CoreRoleUser;
+import org.daxue.model.SysRoleUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class SysRoleUserService {
         this.roleUserMapper = roleUserMapper;
     }
 
-    public List<CoreRoleUser> listByUserId(Integer userId) {
+    public List<SysRoleUser> listByUserId(Integer userId) {
         return roleUserMapper.listByUserId(userId);
     }
 

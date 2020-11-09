@@ -38,6 +38,19 @@ java研发过程中使用的工具集合，java开发工具库。
 
 
 引入security设置去全局忽略跟路径的认证授权
+引入springcloud微服务，nacos作为配置中心，nacos默认启动在本地127.0.0.1:8848 nacos/nacos
+持续集成，持续迭代到远程master分支。
+
+本地master分支，为可运行分支。
+本地dev分支为测试分支，随时回退。
+
+拉取远程master分支，搭建本地master运行环境，新建dev分支，在dev分支上开发。
+
+dev分支仅自己可见。
+master本地分支 --  远程master分支建立映射关系。
+
+开发完毕，测试通过
+合并到master分支，推送到远程master分支。
 
 
 #### 启动前置条件

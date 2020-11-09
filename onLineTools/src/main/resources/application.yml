@@ -9,25 +9,27 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848 #注册中心地址
 
-  resources:
-    static-locations: classpath:/templates
-
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.107.127.218:3306/tool?useUnicode=true&characterEncoding=utf-8&useSSL=true
-    username: root
-    password: root
-  redis:
-    host: 127.0.0.1  #Redis服务器连接端口
-    port: 6379
-#    password:          #Redis服务器连接密码（默认为空）
-    timeout: 30000     #连接超时时间（毫秒）
-
-
-  jackson:
-    serialization:
-      indent_output: true
-
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true  # mybatis下划线转为驼峰
+#   转移到nacos config中进行管理
+#   在默认空间下，新建onLineTools.yaml文件
+#  resources:
+#    static-locations: classpath:/templates
+#
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://39.107.127.218:3306/tool?useUnicode=true&characterEncoding=utf-8&useSSL=true
+#    username: root
+#    password: root
+#  redis:
+#    host: 127.0.0.1  #Redis服务器连接端口
+#    port: 6379
+##    password:          #Redis服务器连接密码（默认为空）
+#    timeout: 30000     #连接超时时间（毫秒）
+#
+#
+#  jackson:
+#    serialization:
+#      indent_output: true
+#
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true  # mybatis下划线转为驼峰

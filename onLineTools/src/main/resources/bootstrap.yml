@@ -4,8 +4,9 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         refresh-enabled: true
+        file-extension: yaml
   #       group:
 #       namespace:
 
   application:
-    name: onLineTools
+    name: onLineTools.yaml

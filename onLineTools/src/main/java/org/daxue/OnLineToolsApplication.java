@@ -13,7 +13,7 @@ public class OnLineToolsApplication {
         SpringApplication.run(OnLineToolsApplication.class, args);
     }
 
-    @Value("${servlet.port}")
+    @Value("${server.port}")
     public String port;
 
     @Bean
